@@ -1,0 +1,1001 @@
+/* General Layout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light mode background */
+    color: #333; /* Light mode text */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header {
+    background-color: #009688; /* Teal header background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header .user-info span {
+    font-size: 14px;
+}
+
+header .user-info a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+header .user-info a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Post Creation Form */
+.create-post-form {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.create-post-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.create-post-form textarea:focus {
+    border-color: #009688; /* Teal border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5); /* Teal glow on focus */
+}
+
+.create-post-form button {
+    background-color: #009688; /* Teal button */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-form button:hover {
+    background-color: #00796b; /* Darker teal */
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e6f7ff; /* Light blue background for comments */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure the comments section does not exceed the container width */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+.comments h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #007ac2; /* Siemens blue for the heading */
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff; /* White background for individual comments */
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure individual comments do not exceed the container width */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+.comment:last-child {
+    margin-bottom: 0;
+}
+
+/* Add Comment Form */
+.add-comment-form {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light gray background for the form */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure the form does not exceed the container width */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+.add-comment-form textarea {
+    width: calc(100% - 20px); /* Adjust width to fit within the form padding */
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* White background for text area */
+    color: #333; /* Dark text */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+.add-comment-form textarea:focus {
+    border-color: #009688; /* Teal border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5); /* Teal glow on focus */
+}
+
+.add-comment-form button {
+    background-color: #009688; /* Teal button */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment-form button:hover {
+    background-color: #00796b; /* Darker teal */
+}
+
+/* Dark Mode */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+body.dark-mode a {
+    color: #ffffff; /* Light purple for links */
+}
+
+body.dark-mode .post-container {
+    background-color: #1e1e1e; /* Darker background for posts */
+    border-color: #333333; /* Darker border */
+}
+
+body.dark-mode header {
+    background-color: #009999; /* Turquoise header background */
+}
+
+body.dark-mode .create-post-form {
+    background-color: #2b2b2b; /* Dark gray card background */
+    color: #e0e0e0; /* Light gray text */
+}
+
+body.dark-mode .create-post-form textarea {
+    background-color: #1e1e1e; /* Darker gray background */
+    color: #e0e0e0; /* Light gray text */
+    border: 1px solid #444; /* Dark gray border */
+}
+
+body.dark-mode .create-post-form textarea:focus {
+    border-color: #009999; /* Turquoise border on focus */
+    box-shadow: 0 0 5px rgba(0, 153, 153, 0.5); /* Turquoise glow on focus */
+}
+
+body.dark-mode .create-post-form button {
+    background-color: #009999; /* Turquoise button */
+    color: white;
+}
+
+body.dark-mode .create-post-form button:hover {
+    background-color: #007777; /* Darker turquoise */
+}
+
+body.dark-mode .comments {
+    background-color: #2b2b2b; /* Dark gray background for comments */
+}
+
+body.dark-mode .comments h4 {
+    color: #009999; /* Turquoise for the heading */
+}
+
+body.dark-mode .comment {
+    background-color: #1e1e1e; /* Darker gray for individual comments */
+    color: #e0e0e0; /* Light gray text */
+}
+
+body.dark-mode .add-comment-form {
+    background-color: #2b2b2b; /* Dark gray background for the form */
+}
+
+body.dark-mode .add-comment-form textarea {
+    background-color: #1e1e1e; /* Darker gray background for text area */
+    color: #e0e0e0; /* Light gray text */
+    border: 1px solid #444; /* Dark gray border */
+}
+
+body.dark-mode .add-comment-form textarea:focus {
+    border-color: #009999; /* Turquoise border on focus */
+    box-shadow: 0 0 5px rgba(0, 153, 153, 0.5); /* Turquoise glow on focus */
+}
+
+body.dark-mode .add-comment-form button {
+    background-color: #009999; /* Turquoise button */
+    color: white;
+}
+
+body.dark-mode .add-comment-form button:hover {
+    background-color: #007777; /* Darker turquoise */
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #00796b;
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-form button {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #00796b;
+}
+
+/* Ensure long text in comments wraps properly */
+.comment {
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Break long words for modern browsers */
+    white-space: normal; /* Allow normal wrapping without preserving extra whitespace */
+    background-color: #f9f9f9; /* Light background for comments */
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-size: 14px; /* Adjust font size for better readability */
+    line-height: 1.5; /* Improve line spacing for readability */
+}
+
+/* Post Container */
+.post-container {
+    background-color: #ffffff; /* White background for the post */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like appearance */
+    margin-bottom: 20px; /* Space between posts */
+    border: 1px solid #ddd; /* Optional: Light border for better separation */
+    overflow: hidden; /* Ensure content stays inside the container */
+}
+.post-container:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+    border-color: #ccc; /* Change border color on hover */
+}
+.post-header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.post-header strong {
+    margin-left: 10px;
+}
+
+/* General Layout for Login, Register, and Profile Pages */
+.auth-container, .profile-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for forms */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like appearance */
+    border: 1px solid #ddd; /* Optional: Light border for better separation */
+}
+
+.auth-container h2, .profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Dark text */
+}
+
+.auth-container form, .profile-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input, .profile-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.auth-container input:focus, .profile-container input:focus {
+    border-color: #009688; /* Teal border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5); /* Teal glow on focus */
+}
+
+.auth-container button, .profile-container button {
+    background-color: #009688; /* Teal button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover, .profile-container button:hover {
+    background-color: #00796b; /* Darker teal */
+}
+
+.auth-container a, .profile-container a {
+    text-align: center;
+    color: #009688; /* Teal links */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-container a:hover, .profile-container a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ddd; /* Light border */
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-header h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.profile-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.profile-container input:focus {
+    border-color: #009688; /* Teal border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5); /* Teal glow on focus */
+}
+
+.profile-container button {
+    background-color: #009688; /* Teal button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container button:hover {
+    background-color: #00796b; /* Darker teal */
+}
+
+body.dark-mode .auth-container, body.dark-mode .profile-container {
+    background-color: #1e1e1e; /* Dark gray background */
+    color: #e0e0e0; /* Light gray text */
+    border: 1px solid #444; /* Darker border */
+}
+
+body.dark-mode .auth-container input, body.dark-mode .profile-container input {
+    background-color: #2b2b2b; /* Darker gray background */
+    color: #e0e0e0; /* Light gray text */
+    border: 1px solid #444; /* Dark gray border */
+}
+
+body.dark-mode .auth-container input:focus, body.dark-mode .profile-container input:focus {
+    border-color: #009999; /* Turquoise border on focus */
+    box-shadow: 0 0 5px rgba(0, 153, 153, 0.5); /* Turquoise glow on focus */
+}
+
+body.dark-mode .auth-container button, body.dark-mode .profile-container button {
+    background-color: #009999; /* Turquoise button */
+}
+
+body.dark-mode .auth-container button:hover, body.dark-mode .profile-container button:hover {
+    background-color: #007777; /* Darker turquoise */
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Chat Container - Light Mode */
+#chat-container {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ccc; /* Light border */
+    color: #333; /* Dark text */
+}
+
+/* Chat Messages - Light Mode */
+.chat-message.sent {
+    background-color: #d1ffd1; /* Light green for sent messages */
+    color: #333; /* Dark text */
+}
+
+.chat-message.received {
+    background-color: #f1f1f1; /* Light gray for received messages */
+    color: #333; /* Dark text */
+}
+
+#chat-form textarea {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text */
+    border: 1px solid #ccc; /* Light border */
+}
+
+/* Chat Container - Dark Mode */
+body.dark-mode #chat-container {
+    background-color: #1e1e1e; /* Dark background */
+    border: 1px solid #333; /* Dark border */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Chat Messages - Dark Mode */
+body.dark-mode .chat-message.sent {
+    background-color: #2e7d32; /* Dark green for sent messages */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode .chat-message.received {
+    background-color: #424242; /* Dark gray for received messages */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode #chat-form textarea {
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    border: 1px solid #444; /* Dark border */
+}
+
+/* Chat Container */
+#chat-container {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ccc; /* Light border */
+    color: #333; /* Dark text */
+    padding: 15px; /* Add padding around the container */
+    border-radius: 12px; /* Rounded corners for the container */
+    max-height: 500px; /* Increase height for better visibility */
+    overflow-y: auto; /* Enable scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
+    max-width: 600px; /* Limit the width of the chat container */
+    margin: 20px auto; /* Center the chat container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+}
+
+/* Chat Messages */
+.chat-message {
+    max-width: 70%; /* Limit message width to 70% of the container */
+    padding: 10px 15px; /* Add padding inside messages */
+    border-radius: 20px; /* Rounded corners for chat bubbles */
+    font-size: 14px; /* Smaller font size */
+    line-height: 1.5; /* Better line spacing */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure long words wrap properly */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for chat bubbles */
+    position: relative; /* For timestamp positioning */
+}
+
+/* Sent Messages */
+.chat-message.sent {
+    background-color: #d1ffd1; /* Light green for sent messages */
+    color: #333; /* Dark text */
+    align-self: flex-end; /* Align to the right */
+    text-align: left; /* Left-align text */
+}
+
+/* Received Messages */
+.chat-message.received {
+    background-color: #f1f1f1; /* Light gray for received messages */
+    color: #333; /* Dark text */
+    align-self: flex-start; /* Align to the left */
+    text-align: left; /* Left-align text */
+}
+
+/* Timestamp */
+.chat-message small {
+    display: block;
+    font-size: 12px;
+    color: #888; /* Subtle gray for timestamps */
+    margin-top: 5px;
+    text-align: right; /* Align timestamp to the right */
+}
+
+/* Chat Messages - Dark Mode */
+body.dark-mode .chat-message.sent {
+    background-color: #2e7d32; /* Dark green for sent messages */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode .chat-message.received {
+    background-color: #424242; /* Dark gray for received messages */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode .chat-message small {
+    color: #bbb; /* Subtle gray for timestamps in dark mode */
+}
+
+/* Chat Form */
+#chat-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 600px; /* Match the chat container width */
+    margin: 0 auto; /* Center the chat form */
+}
+
+#chat-form textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #333;
+    resize: none;
+    font-size: 14px;
+    line-height: 1.5;
+    height: 50px; /* Slightly larger height */
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for input */
+}
+
+body.dark-mode #chat-form textarea {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+#chat-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #009688;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+}
+
+#chat-form button:hover {
+    background-color: #00796b;
+}
+
+/* Scrollbar Styling */
+#chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 8px;
+}
+
+body.dark-mode #chat-container::-webkit-scrollbar-thumb {
+    background-color: #444;
+}
+
+/* Sender Name */
+.sender-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555; /* Subtle gray for sender name */
+    margin-bottom: 5px;
+    display: block;
+}
+
+body.dark-mode .sender-name {
+    color: #bbb; /* Subtle gray for dark mode */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button-link:hover {
+    background-color: #00796b;
+}
+
+/* Chat Container */
+#chat-container {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0005;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Eingabe-Bereich */
+/* Eingabebereich */
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+#message {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: none;
+    background: #333;
+    color: #eee;
+    height: 48px;
+    resize: none;
+}
+
+.upload-label,
+#emoji-toggle,
+#chat-form button[type="submit"] {
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.upload-label:hover,
+#emoji-toggle:hover,
+#chat-form button[type="submit"]:hover {
+    background-color: #00796b;
+}
+
+#image-upload {
+    display: none;
+}
+
+/* Emoji Picker */
+emoji-picker {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    z-index: 999;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0008;
+    width: 320px;
+    display: none;
+}
+
+/* Nachrichtenblase */
+.message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.6rem 0;
+    padding: 0 1rem;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message-content {
+    background-color: #2e7d32;
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 16px;
+    max-width: 300px;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.message.received .message-content {
+    background-color: #3b3b3b;
+}
+
+.timestamp {
+    display: block;
+    font-size: 0.7rem;
+    color: #bbb;
+    margin-top: 0.3rem;
+    text-align: right;
+}
+
+.chat-image {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    max-height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0.4rem 0 0.2rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Emoji Picker */
+emoji-picker {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    z-index: 999;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #0008;
+    width: 300px;
+    max-height: 400px;
+}
+
+.chat-image {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    max-height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0.4rem 0 0.2rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.message-content {
+    background-color: #2e7d32;
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 16px;
+    max-width: 300px;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.message.received .message-content {
+    background-color: #3b3b3b;
+}
+
+.timestamp {
+    display: block;
+    font-size: 0.7rem;
+    color: #bbb;
+    margin-top: 0.3rem;
+    text-align: right;
+}
+
+.message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.6rem 0;
+    padding: 0 1rem;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.quickchat {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px #0005;
+}
+
+.quickchat h2 {
+    margin-bottom: 1rem;
+    color: #eee;
+}
+
+.quickchat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quickchat-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ddd;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    transition: background 0.3s;
+}
+
+.quickchat-item a:hover {
+    background-color: #333;
+}
+
+.quickchat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #444;
+}
+
+.profile-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-overview h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.profile-overview p {
+    color: #ccc;
+}
+
+.profile-settings form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.profile-picture-large {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000;
+}

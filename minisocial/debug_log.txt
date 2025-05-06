@@ -1,0 +1,123 @@
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Anfrage erreicht
+Nachricht gespeichert
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => dwswsw
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => Screenshot 2025-04-29 082545.jpg
+            [full_path] => Screenshot 2025-04-29 082545.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php6482.tmp
+            [error] => 0
+            [size] => 55608
+        )
+
+)
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => sas
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => Untitled Project (1) (1).jpg
+            [full_path] => Untitled Project (1) (1).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEEA6.tmp
+            [error] => 0
+            [size] => 2020897
+        )
+
+)
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => awdasd
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => Untitled Project (1) (1).jpg
+            [full_path] => Untitled Project (1) (1).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7B8.tmp
+            [error] => 0
+            [size] => 2020897
+        )
+
+)
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => 😁😁sq
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => wqsqw
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+--- Neue Anfrage ---
+POST: Array
+(
+    [receiver_id] => 2
+    [message] => they got my boy😭😭😭😭😭😭😭
+)
+FILES: Array
+(
+    [image] => Array
+        (
+            [name] => assets_task_01jt7xn4q9ea5r4t3eqfypj5mv_1746170298_img_0.webp
+            [full_path] => assets_task_01jt7xn4q9ea5r4t3eqfypj5mv_1746170298_img_0.webp
+            [type] => image/webp
+            [tmp_name] => C:\xampp\tmp\php821F.tmp
+            [error] => 0
+            [size] => 210044
+        )
+
+)
